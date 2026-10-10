@@ -1,0 +1,65 @@
+/* Стиль интерфейса */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.game-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+.stats {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 10px;
+}
+.click-area {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.tap-effect {
+    /* Анимация кликов */
+    position: absolute;
+    font-size: 24px;
+    color: #ffeb3b;
+    opacity: 0;
+    animation: floatUp 1s ease-out;
+}
+@keyframes floatUp {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(-50px) scale(1.5); }
+}
+.upgrade-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.upgrade-btn:hover {
+    background: #1976D2;
+}
+.upgrade-btn:disabled {
+    background: #90a4ae;
+    cursor: not-allowed;
+}
